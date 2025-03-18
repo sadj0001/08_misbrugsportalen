@@ -1,15 +1,10 @@
 ---
 import Menu from "../components/Menu.astro";
 import Header from "../components/Header.astro";
-import Intro from "../components/Intro.astro";
-import Talebobler from "../components/Talebobler.astro";
-import Erfaring from "../components/Erfaring.astro";
-import Hvorfor from "../components/Hvorfor.astro";
-import Faq from "../components/Faq.astro";
-import Info from "../components/Info.astro";
-import Formsinfo from "../components/Formsinfo.astro";
+import Section from "../components/Section.astro";
 import Forms from "../components/Forms.astro";
 import Footer from "../components/Footer.astro";
+import Button from "../components/Button.astro";
 
 ---
 
@@ -33,15 +28,56 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Menu />
-    <Header />
-	<Intro />
-	<Talebobler />
-	<Erfaring />
-	<Hvorfor />
-	<Faq />
-	<Info />
-	<Formsinfo />
-	<Forms />
+    <Header title="Vi har brug for dig!" backgroundColor="#BF3F22">
+      <p>
+        Vil du være med til at skabe meningsfuld forandring for mennesker, der er nærtstående til misbrugsramte? Bliv en del af vores frivillig team!
+      </p>
+      <img src="/public/images/ilu7" alt="hands">
+    </Header>
+
+	  <Section title="Hvad indebærer det at blive frivillig?" backgroundColor="#f3f4f6">
+      <div class="grid_1-1">
+        <div>
+          <p>Pårørende Netværket – Misbrugsportalen søger løbende engagerede frivillige rådgivere, der ønsker at støtte mennesker med misbrugsrelaterede udfordringer – hvad end det er alkohol-, stof- eller medicinmisbrug.
+
+              Som frivillig rådgiver indgår du i et varmt og fagligt stærkt fællesskab af frivillige med relevant baggrund inden for social- og sundhedsområdet, terapeuter, tidligere pårørende, misbrugskonsulenter og meget mere. Som frivillige hos os spiller det ingen rolle, hvor i landet du bor – vores tilbud er alle landsdækkende, og vores interne kommunikation foregår online. Det ændrer dog ikke på, at vi har et utroligt nærværende, levende og støttende fællesskab blandt vores kollegaer!
+
+              Klik forneden for at tilmelde dig næste infomøde i januar!</p>
+          <Button/>
+        </div>
+
+        <div>
+          <img src="/public/images/ilu1" alt="people">
+        </div>
+      </div>
+    
+    </Section>
+
+    <Section title="Eksempel på en samtale med pårørende" backgroundColor="#f3f4f6">
+
+    </Section>
+
+    <Section title="Din erfaring og forståelse gør stor forskel i andres liv" backgroundColor="#f3f4f6">
+
+    </Section>
+
+    <Section title="Hvorfor blive frivillig?" backgroundColor="#f3f4f6">
+
+    </Section>
+
+    <Section title="Ofte stillede spørgsmål" backgroundColor="#f3f4f6">
+
+    </Section>
+
+    <Section title="Læs mere om..." backgroundColor="#f3f4f6">
+
+    </Section>
+
+    <Section title="Inden du udfylder ansøgningsformularen, skal du..." backgroundColor="#f3f4f6">
+
+    </Section>
+  
+	  <Forms />
     <Footer />
   </body>
 </html>
