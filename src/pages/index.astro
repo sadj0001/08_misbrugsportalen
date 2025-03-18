@@ -1,11 +1,16 @@
 ---
+/* Komponente */
 import Menu from "../components/Menu.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 import Forms from "../components/Forms.astro";
 import Footer from "../components/Footer.astro";
-import Button from "../components/Button.astro";
 
+/* Indhold i ovenstående komponenter */
+import Button from "../components/Button.astro";
+import Talebobler from "../components/Talebobler.astro";
+import Info from "../components/Info.astro";
+import Infoboks from "../components/Infoboks.astro";
 ---
 
 <!doctype html>
@@ -29,55 +34,130 @@ import Button from "../components/Button.astro";
   <body>
     <Menu />
     <Header title="Vi har brug for dig!" backgroundColor="#BF3F22">
-      <p>
+      <div class="grid_1-1">
+        <p class="header_tekst">
         Vil du være med til at skabe meningsfuld forandring for mennesker, der er nærtstående til misbrugsramte? Bliv en del af vores frivillig team!
-      </p>
-      <img src="/public/images/ilu7" alt="hands">
+        </p>
+        <img class="header_billede" src="public/images/ilu7.webp" alt="hands">
+      </div>
     </Header>
 
-	  <Section title="Hvad indebærer det at blive frivillig?" backgroundColor="#f3f4f6">
+	  <Section title="Hvad indebærer det at blive frivillig?" backgroundColor="#FCF3E1">
       <div class="grid_1-1">
         <div>
-          <p>Pårørende Netværket – Misbrugsportalen søger løbende engagerede frivillige rådgivere, der ønsker at støtte mennesker med misbrugsrelaterede udfordringer – hvad end det er alkohol-, stof- eller medicinmisbrug.
+          <p>Pårørende Netværket – Misbrugsportalen søger løbende engagerede frivillige rådgivere, der ønsker at støtte mennesker med misbrugsrelaterede udfordringer – hvad end det er alkohol-, stof- eller medicinmisbrug.</p>
 
-              Som frivillig rådgiver indgår du i et varmt og fagligt stærkt fællesskab af frivillige med relevant baggrund inden for social- og sundhedsområdet, terapeuter, tidligere pårørende, misbrugskonsulenter og meget mere. Som frivillige hos os spiller det ingen rolle, hvor i landet du bor – vores tilbud er alle landsdækkende, og vores interne kommunikation foregår online. Det ændrer dog ikke på, at vi har et utroligt nærværende, levende og støttende fællesskab blandt vores kollegaer!
+          <p>Som frivillig rådgiver indgår du i et varmt og fagligt stærkt fællesskab af frivillige med relevant baggrund inden for social- og sundhedsområdet, terapeuter, tidligere pårørende, misbrugskonsulenter og meget mere. Som frivillige hos os spiller det ingen rolle, hvor i landet du bor – vores tilbud er alle landsdækkende, og vores interne kommunikation foregår online. Det ændrer dog ikke på, at vi har et utroligt nærværende, levende og støttende fællesskab blandt vores kollegaer!</p>
 
-              Klik forneden for at tilmelde dig næste infomøde i januar!</p>
+          <p>Klik forneden for at tilmelde dig næste infomøde i januar!</p>
+          
           <Button/>
         </div>
 
         <div>
-          <img src="/public/images/ilu1" alt="people">
+          <img src="/public/images/ilu1.webp" alt="people">
         </div>
       </div>
-    
     </Section>
 
-    <Section title="Eksempel på en samtale med pårørende" backgroundColor="#f3f4f6">
+    <Section title="Eksempel på en samtale med pårørende" backgroundColor="#BF3F22">
+      <Talebobler/>
+      <Talebobler/>
+      <Talebobler/>
+      <Talebobler/>
+    </Section>
+
+    <Section title="Din erfaring og forståelse gør stor forskel i andres liv" backgroundColor="#FCF3E1">
+       <div class="grid_1-1">
+        <div>
+          <p>Har du selv erfaring som tidligere misbrugsramt eller pårørende, og kunne du tænke dig at gøre en forskel for andre mennesker?</p>
+
+          <p>Vores frivillige tilbyder samtalestøtte til individer og familier berørt af misbrug som rådgivere på vores akuttelefon, i individuelle telefoniske samtaleforløb og som terapeutiske gruppeledere i vores online gruppeforløb.</p>
+
+          <p>Som frivillig i vores forening gennemgår du en grunding oplæring og en mentor, der klæder dig på til at støtte andre pårørende gennem samtalestøtte.</p>
+          
+          <p>Tryk forneden for at blive frivillig</p>
+
+          <Button/>
+        </div>
+
+        
+        <img src="public/images/storkroellepil.webp" alt="people">
+        
+      </div>
+    </Section>
+
+    <Section title="Hvorfor blive frivillig?" backgroundColor="#61C6BB">
 
     </Section>
 
-    <Section title="Din erfaring og forståelse gør stor forskel i andres liv" backgroundColor="#f3f4f6">
-
+    <Section title="Ofte stillede spørgsmål" backgroundColor="#FCF3E1">
+      <div class="grid_1-1">
+        <div>
+          <Info/>
+          <Info/>
+          <Info/>
+        </div>
+        <div>
+          <Info/>
+          <Info/>
+          <Info/>
+        </div>
+      </div>
     </Section>
 
-    <Section title="Hvorfor blive frivillig?" backgroundColor="#f3f4f6">
-
+    <Section title="Læs mere om..." backgroundColor="#D9E021">
+      <div class="grid_1-1-1">
+        <Infoboks/>
+        <Infoboks/>
+        <Infoboks/>
+      </div>
     </Section>
 
-    <Section title="Ofte stillede spørgsmål" backgroundColor="#f3f4f6">
+    <Section title="Inden du udfylder ansøgningsformularen, skal du..." backgroundColor="#FCF3E1">
+          <div class="grid_1-1">
+        <div>
+          <p>..have gennemført vores e-lærings introduktionskursus som du finder på forsiden af www.rådgiverportalen.dk</p>
 
-    </Section>
+          <p>Herigennem får du et grundigt indblik i rådgiverrollen og kan orientere dig om de vigtigste faglige og praktiske informationer, som potentiel ny frivillig i rådgivningen.</p>
 
-    <Section title="Læs mere om..." backgroundColor="#f3f4f6">
+          <p>Felter markeret med * skal udfyldes for at du kan sende ansøgningen, herunder ansøgning, som skal sendes som separat dokument. Vi lægger vægt på at der også indsendes et CV, men det kan eftersendes såfremt du ikke indsender i første omgang.</p>
+          
+          <p>Når du har udfyldt skemaet, vil du få en automail med information om, hvornår du vil få svar på din ansøgning, samt eventuelt tid til en samtale. Når vi har afviklet ansættelsessamtaler og taget stilling til det videre forløb, vil færdigbehandlede ansøgninger blive slettet.</p>
 
-    </Section>
+          <p>Hvis du har spørgsmål eller oplever problemer med at sende din ansøgning, er du meget velkommen til at kontakte sekretariatet alle hverdage fra kl. 10.00 - 15.00 på telefon 70 60 48 46.</p>
+          
+        </div>
 
-    <Section title="Inden du udfylder ansøgningsformularen, skal du..." backgroundColor="#f3f4f6">
-
+        <div>
+          <img src="public/images/ilu7.webp" alt="hands">
+        </div>
+      </div>
     </Section>
   
 	  <Forms />
     <Footer />
   </body>
 </html>
+
+<style>
+   .grid_1-1{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    p{
+        font-size: 35px;
+    }
+
+    .header_tekst{
+      color: #FCF3E1;
+      margin-top: -2rem;
+    }
+
+    .header_billede{
+      margin-top: -17rem;
+      margin-left: 5rem;
+      width: 60%;
+    }
+</style>
