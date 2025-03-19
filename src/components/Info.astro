@@ -1,0 +1,81 @@
+---
+const { text, answer } = Astro.props;
+---
+
+<div class="info-box" id="info-box">
+  <p>{text}</p>
+  <img src="/images/ilu5.webp" alt="Pil ned" class="arrow" />
+  <p class="answer">{answer}</p>
+</div>
+
+<style>
+  .info-box {
+    background-color: #BF3F22; 
+    color: #FCF3E1;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 400px;
+    font-size: 1.2rem;
+    cursor: pointer; 
+    margin-bottom: 10px;
+    overflow: hidden; 
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease; 
+  }
+
+  .answer {
+    display: block;
+    max-height: 0; 
+    overflow: hidden; 
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #FFD4C2;
+    padding: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+  }
+
+
+  @keyframes rotateArrow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  .open .arrow {
+    animation: rotateArrow 0.3s forwards;
+  }
+
+  .open .answer {
+    max-height: 200px; 
+    padding: 10px; 
+  }
+</style>
+
+<script client:load>
+  let isOpen = false;
+
+  const toggleAnswer = () => {
+    const container = document.getElementById("info-box");
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      container.classList.add("open");
+    } else {
+      container.classList.remove("open");
+    }
+  };
+
+  document.getElementById('info-box').addEventListener('click', toggleAnswer);
+</script>
