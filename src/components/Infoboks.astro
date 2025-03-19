@@ -1,0 +1,16 @@
+---
+const {imageSrc, text, backgroundColor, style } = Astro.props;
+---
+
+
+<article style={{ backgroundColor: backgroundColor, borderRadius: '25px', ...style }}>
+  <img src={imageSrc} alt={`Image og ${text}`} />
+  <p>{text}</p> 
+  <p class="pil">&rarr;</p>
+</article>
+
+<style>
+.pil{
+font-size: 90px;
+}
+</style>
