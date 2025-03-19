@@ -63,23 +63,21 @@ import Infoboks from "../components/Infoboks.astro";
 
     <Section title="Eksempel på en samtale med pårørende" backgroundColor="#BF3F22">
       <div class="grid_talebobler">
-      <div>
+      <div class="left">
         <p>Pårørende</p>
         <img src="/images/samtale1.webp" alt="samtale1">
+        <div class="right">
+        </div>
       </div>
-      <div></div>
-      <div></div>
-       <div>
+       <div class="right">
         <p>Rådgiver</p>
         <img src="/images/samtale2.webp" alt="samtale2">
       </div>
-       <div>
+       <div class="left">
         <p>Pårørende</p>
         <img src="/images/samtale3.webp" alt="samtale3">
       </div>
-      <div></div>
-      <div></div>
-          <div>
+        <div class="right">
         <p>Rådgiver</p>
         <img src="/images/samtale4.webp" alt="samtale4">
       </div>
@@ -180,4 +178,26 @@ import Infoboks from "../components/Infoboks.astro";
       margin-left: 5rem;
       width: 60%;
     }
+
+
+    .grid_talebobler{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8rem;
+    }
+
+    .left{
+    text-align: left;
+    position: relative;
+    top: -80px;
+    padding-top: 2rem;
+    }
+
+    .right{
+      text-align: right;
+      position: relative;
+      top: 80px;
+      padding-bottom: 2rem;
+    }
+
 </style>
