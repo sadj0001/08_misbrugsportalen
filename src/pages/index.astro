@@ -127,13 +127,15 @@ import Infoboks from "../components/Infoboks.astro";
       </div>
     </Section>
 
-    <Section title="Læs mere om..." backgroundColor="#D9E021">
-      <div class="grid_1-1-1">
-        <Infoboks/>
-        <Infoboks/>
-        <Infoboks/>
-      </div>
-    </Section>
+<Section title="Læs mere om..." backgroundColor="#D9E021">
+  <div class="grid_1-1-1">
+    <Infoboks imageSrc="/images/ilu6.webp" text="Tilmeld dig næste infomøde" backgroundColor="#FCF3E1" style={{ padding: '80px' }} />
+    <Infoboks imageSrc="/images/lillekroellepil.webp" text="Gennemfør introkursus" backgroundColor="#FCF3E1"style={{ padding: '80px' }} />
+<Infoboks imageSrc="/images/ilu1.webp" text="Læs mere om rådgiverrollen" backgroundColor="#FCF3E1" style={{ padding: '20px' }} />
+  </div>
+</Section>
+
+
 
     <Section title="Inden du udfylder ansøgningsformularen, skal du..." backgroundColor="#FCF3E1">
           <div class="grid_1-1">
@@ -254,7 +256,7 @@ import Infoboks from "../components/Infoboks.astro";
       width: 60%;
     }
 
-
+/*talebobler*/
     .grid_talebobler{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -274,6 +276,23 @@ import Infoboks from "../components/Infoboks.astro";
       top: 80px;
       padding-bottom: 2rem;
     }
+
+
+    /*Læs mere om*/
+    @media (min-width: 1000px) {
+  .grid_1-1-1 {
+   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  border-radius: 5px;
+  }
+}
+
+.last-image img {
+  width: 50px;  /* Ændr billedets størrelse */
+  height: auto;  /* Behold aspektforholdet */
+}
+
 
     /* forms */
 
