@@ -3,7 +3,6 @@
 import Menu from "../components/Menu.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
-import Forms from "../components/Forms.astro";
 import Footer from "../components/Footer.astro";
 
 /* Indhold i ovenstående komponenter */
@@ -153,7 +152,79 @@ import Infoboks from "../components/Infoboks.astro";
       </div>
     </Section>
   
-	  <Forms />
+	   <Section title="Ansøg om en stilling som frivillig rådgiver​" backgroundColor="#BF3F22" class="form">
+         <form action="mailto:mail@misbrugsportalen.dk" method="post" enctype="text/plain">
+                <div class="mail_box">
+                    <label>
+                        Dit fulde navn:<br>
+                        <input id="full-name" name="fname" required>
+                    </label>
+                </div>
+                <div class="mail_box">
+                    <label>
+                        Dit fødselsår:<br>
+                        <input id="birth" name="birth" required>
+                    </label>
+                </div>
+                 <div class="mail_box">
+                    <label>
+                        By:<br>
+                        <input id="city" name="city" required>
+                    </label>
+                </div>
+                <div class="mail_box">
+                    <label>
+                        E-mail:<br>
+                        <input id="email" name="email" required>
+                    </label>
+                </div>
+                 <div class="mail_box">
+                    <label>
+                        Telefonnummer:<br>
+                        <input id="number" name="number" required>
+                    </label>
+                </div>
+                <div class="mail_box">
+                    <label>
+                        Uddannelse eller beskæftigelse:<br>
+                        <input id="edu" name="edu" required>
+                    </label>
+                </div>
+                <div class="mail_box">
+                    Hvad tiltaler dig ved at være frivillig hos Misbrugsportalen?<br>
+                    <textarea name="frivillig" rows="5"></textarea>
+                </div>
+                <div class="mail_box">
+                    Hvilke erfaringer, personlige såvel som faglige, forestiller du dig kunne blive relevante i rollen som frivillig i Misbrugersportalen?<br>
+                    <textarea name="erfaring" rows="5"></textarea>
+                </div>
+                <div class="mail_box">
+                  <label>
+                      CV - eller andre relevante bilag:<br>
+                      <input type="file" id="cv-upload" name="cv" accept=".pdf,.doc,.docx">
+                  </label>
+                </div>
+                <div class="mail_box">
+                    Hvordan har du hørt om os?<br>
+                    <textarea name="heard" rows="5"></textarea>
+                </div>
+                <div class="mail_box">
+                  <label>
+                      <input class="input_check" type="checkbox" id="terms" name="terms" required>
+                      Jeg har gennemført Misbrugsportalens introduktionskursus
+                  </label>
+                </div>
+                <div class="mail_box">
+                  <label>
+                      <input class="input_check" type="checkbox" id="terms" name="terms" required>
+                      Jeg accepterer Misbrugersportalens Privatlivspolitik
+                  </label>
+                </div>
+
+              <Button text="Indsend ansøgning"/>
+
+            </form>
+    </Section>
     <Footer />
   </body>
 </html>
@@ -199,5 +270,49 @@ import Infoboks from "../components/Infoboks.astro";
       top: 80px;
       padding-bottom: 2rem;
     }
+
+    /* forms */
+
+    form {
+      color: #ffffff;
+      padding-bottom: 10px;
+      font-family: "roboto", sans-serif;
+      color: white;
+      font-weight: lighter;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .mail_box {
+      padding-bottom: 40px;
+    }
+
+    input {
+      background-color: var(--primary);
+      border: 1px solid #ffffff; 
+      padding: 5px; 
+      border-radius: 3px;
+      color: white;
+      font-family: "roboto", sans-serif;
+      font-weight: lighter;
+      width: 20rem;
+    }
+
+    .input_check{
+      width: 20px;
+      padding: 0;
+    }
+
+    textarea {
+      background-color: var(--primary);
+      border: 1px solid #ffffff;
+      padding: 5px;
+      border-radius: 3px;
+      color: rgba(255, 255, 255, 0);
+      font-family: "roboto", sans-serif;
+      font-weight: lighter;
+      width: 20rem;
+    }
+
 
 </style>
