@@ -4,9 +4,11 @@ const {imageSrc, text, backgroundColor, style } = Astro.props;
 
 
 <article style={{ backgroundColor: backgroundColor, borderRadius: '25px', ...style }}>
-  <img src={imageSrc} alt={`Image og ${text}`} />
+  <div class="omkreds">
+  <img class="infoboks_billeder" src={imageSrc} alt={`Image og ${text}`} />
   <p>{text}</p> 
   <p class="pil">&rarr;</p>
+  </div>
 </article>
 
 <style>
@@ -15,7 +17,15 @@ const {imageSrc, text, backgroundColor, style } = Astro.props;
   display: grid;
   grid-template-columns: subgrid;
 } */
+.infoboks_billeder{
+  max-height: 30rem;
+  min-height: 15rem;
+  width: 100%;
+}
 
+.omkreds{
+  margin: 5rem;
+}
 
 .pil{
 font-size: 90px;
