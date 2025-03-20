@@ -10,6 +10,28 @@ const {imageSrc, text, backgroundColor, style } = Astro.props;
 </article>
 
 <style>
+
+/* .grid_1-1-1 > .Infoboks {
+  display: grid;
+  grid-template-columns: subgrid;
+} */
+
+.infoboks {
+  display: flex;  /* Brug flexbox til at arrangere indholdet i infoboksen */
+  flex-direction: column;  /* Arranger elementerne vertikalt */
+  justify-content: space-between; /* Sørg for at elementerne har lige afstand */
+  text-align: center; /* Centrer teksten i boksen */
+  padding: 20px; /* Du kan justere padding efter behov */
+}
+
+.infoboks img {
+  margin-bottom: 15px; /* Juster afstand mellem billede og tekst/pil */
+}
+
+.infoboks p {
+  margin: 10px 0; /* Juster afstand mellem tekst og pil */
+}
+
 .pil{
 font-size: 90px;
 }
