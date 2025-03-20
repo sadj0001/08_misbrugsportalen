@@ -2,7 +2,7 @@
 const { text, answer } = Astro.props;
 ---
 
-<div class="info-box" id="info-box">
+<div class="info-box">
   <p>{text}</p>
   <img src="/images/ilu5.webp" alt="Pil ned" class="arrow" />
   <p class="answer">{answer}</p>
@@ -10,16 +10,16 @@ const { text, answer } = Astro.props;
 
 <style>
   .info-box {
-    background-color: #BF3F22; 
-    color: #FCF3E1;
+    background-color: #bf3f22;
+    color: #fcf3e1;
     padding: 20px;
     border-radius: 10px;
     position: relative;
     max-width: 400px;
     font-size: 1.2rem;
-    cursor: pointer; 
+    cursor: pointer;
     margin-bottom: 10px;
-    overflow: hidden; 
+    overflow: hidden;
   }
 
   .arrow {
@@ -28,20 +28,21 @@ const { text, answer } = Astro.props;
     right: 10px;
     width: 20px;
     height: auto;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
   }
 
   .answer {
     display: block;
-    max-height: 0; 
-    overflow: hidden; 
+    max-height: 0;
+    overflow: hidden;
     margin-top: 10px;
     font-size: 1rem;
-    color: #FFD4C2;
+    color: #ffd4c2;
     padding: 0;
-    transition: max-height 0.3s ease, padding 0.3s ease; 
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease;
   }
-
 
   @keyframes rotateArrow {
     0% {
@@ -52,30 +53,27 @@ const { text, answer } = Astro.props;
     }
   }
 
-
   .open .arrow {
     animation: rotateArrow 0.3s forwards;
   }
 
   .open .answer {
-    max-height: 200px; 
-    padding: 10px; 
+    max-height: 200px;
+    padding: 10px;
   }
 </style>
 
-<script client:load>
-  let isOpen = false;
-
-  const toggleAnswer = () => {
-    const container = document.getElementById("info-box");
-    isOpen = !isOpen;
-
-    if (isOpen) {
-      container.classList.add("open");
-    } else {
-      container.classList.remove("open");
-    }
-  };
-
-  document.getElementById('info-box').addEventListener('click', toggleAnswer);
+<script>
+  document.querySelectorAll(".info-box").forEach((box) => {
+    box.addEventListener("click", () => {
+      // Luk alle andre bokse
+      document.querySelectorAll(".info-box").forEach((otherBox) => {
+        if (otherBox !== box) {
+          otherBox.classList.remove("open");
+        }
+      });
+      // Åbn eller luk den klikkede boks
+      box.classList.toggle("open");
+    });
+  });
 </script>
