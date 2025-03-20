@@ -99,7 +99,33 @@ import Infoboks from "../components/Infoboks.astro";
       </div>
     </Section>
 
-    <Section title="Hvorfor blive frivillig?" backgroundColor="#61C6BB" />
+    <Section title="Hvorfor blive frivillig?" backgroundColor="#61C6BB">
+      <div class="hvorfor1_grid_1-1">
+       <img class="tegn1" src="/images/ilu3.webp" alt="tegn">
+        <div>
+          <p class="hvorfor_box">Skab meningsfulde forbindelser og bliv en del af et varmt og fagligt fællesskab af dedikerede frivillige fra hele landet.</p>
+        </div>
+      </div>
+      <div class="hvorfor2_grid_1-1">
+          <div>
+            <p class="hvorfor_box">Du får et meningsfuldt og givende frivilligjob, hvor du på nært hold følger den forandring, du bidrager til for den enkelte familie.</p>
+          </div>
+          <div>
+            <p class="hvorfor_box">Du bliver støttet og guidet i din opstart af din personlige mentor, og du kan altid søge råd hos kompetente og erfarne ledere og kollegaer.</p>
+          </div>
+      </div>
+      <div class="grid_1-1-1">
+        <div>
+          <p class="hvorfor_box">Du har som rådgiver et fleksibelt skema, som du selv er med til at tilrettelægge.</p>
+        </div>
+        <div>
+          <p class="hvorfor_box">Du får mulighed for at udvikle dine empatiske og faglige færdigheder og et plus på. </p>
+        </div>
+        
+        <img class="tegn2" src="/images/ilu4.webp" alt="tegn">
+        
+      </div>
+    </Section>
 
     <Section title="Ofte stillede spørgsmål" backgroundColor="#FCF3E1">
       <div class="grid_1-1">
@@ -246,6 +272,40 @@ import Infoboks from "../components/Infoboks.astro";
     margin-top: -17rem;
     margin-left: 5rem;
     width: 60%;
+  }
+
+  /*hvorfor blive frivillig*/
+  .tegn1{
+    width: 20%;
+  }
+   .tegn2{
+    width: 32%;
+  }
+
+  .hvorfor_box{
+    max-width: 30ch;
+    border: solid 1px black;
+    padding: 2rem;
+    border-radius: 10%;
+  }
+
+     .hvorfor1_grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 5rem;
+  }
+      .hvorfor2_grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+    .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+       padding-left: 5rem;
   }
 
   /*talebobler*/
