@@ -129,9 +129,15 @@ import Infoboks from "../components/Infoboks.astro";
 
 <Section title="Læs mere om..." backgroundColor="#D9E021">
   <div class="grid_1-1-1">
+    <div class="infoboks">
     <Infoboks imageSrc="/images/ilu6.webp" text="Tilmeld dig næste infomøde" backgroundColor="#FCF3E1" style={{ padding: '80px' }} />
+    </div>
+    <div class="infoboks">
     <Infoboks imageSrc="/images/lillekroellepil.webp" text="Gennemfør introkursus" backgroundColor="#FCF3E1"style={{ padding: '80px' }} />
+    </div>
+<div class="infoboks">
 <Infoboks imageSrc="/images/ilu1.webp" text="Læs mere om rådgiverrollen" backgroundColor="#FCF3E1" style={{ padding: '20px' }} />
+</div>
   </div>
 </Section>
 
@@ -295,6 +301,30 @@ p {
   border-radius: 5px;
   }
 }
+
+
+/* .infoboks {
+  display: flex; 
+  flex-direction: column;  
+  justify-content: space-between; 
+  text-align: center; 
+  padding: 20px; 
+  height: 100%; 
+  display: flex;
+  flex: 1;
+} */
+
+
+.infoboks {
+  display: grid; 
+  grid-template-columns: subgrid;  
+  grid-template-rows: subgrid;  
+  text-align: center;  
+  padding: 20px;  
+}
+
+
+
 
 .last-image img {
   width: 50px;  /* Ændr billedets størrelse */
