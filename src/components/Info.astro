@@ -2,7 +2,7 @@
 const { text, answer } = Astro.props;
 ---
 
-<div class="info-box" id="info-box">
+<div class="info-box">
   <p>{text}</p>
   <img src="/images/ilu5.webp" alt="Pil ned" class="arrow" />
   <p class="answer">{answer}</p>
@@ -64,18 +64,18 @@ const { text, answer } = Astro.props;
 </style>
 
 <script client:load>
-  let isOpen = false;
+  document.querySelectorAll(".info-box").forEach((box) => {
+    box.addEventListener("click", () => {
+      // Luk alle andre bokse
+      document.querySelectorAll(".info-box").forEach((otherBox) => {
+        if (otherBox !== box) {
+          otherBox.classList.remove("open");
+        }
+      });
 
-  const toggleAnswer = () => {
-    const container = document.getElementById("info-box");
-    isOpen = !isOpen;
-
-    if (isOpen) {
-      container.classList.add("open");
-    } else {
-      container.classList.remove("open");
-    }
-  };
-
-  document.getElementById('info-box').addEventListener('click', toggleAnswer);
+      // Åbn eller luk den klikkede boks
+      box.classList.toggle("open");
+    });
+  });
 </script>
+
