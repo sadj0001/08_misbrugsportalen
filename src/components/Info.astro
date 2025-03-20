@@ -3,77 +3,79 @@ const { text, answer } = Astro.props;
 ---
 
 <div class="info-box">
-  <p>{text}</p>
-  <img src="/images/ilu5.webp" alt="Pil ned" class="arrow" />
-  <p class="answer">{answer}</p>
-</div>
+  <div class="info-box">
+    <p>{text}</p>
+    <img src="/images/ilu5.webp" alt="Pil ned" class="arrow" />
+    <p class="answer">{answer}</p>
+  </div>
 
-<style>
-  .info-box {
-    background-color: #bf3f22;
-    color: #fcf3e1;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    max-width: 400px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-bottom: 10px;
-    overflow: hidden;
-  }
-
-  .arrow {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 20px;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-
-  .answer {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #ffd4c2;
-    padding: 0;
-    transition:
-      max-height 0.3s ease,
-      padding 0.3s ease;
-  }
-
-  @keyframes rotateArrow {
-    0% {
-      transform: rotate(0deg);
+  <style>
+    .info-box {
+      background-color: #bf3f22;
+      color: #fcf3e1;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      max-width: 400px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      overflow: hidden;
     }
-    100% {
-      transform: rotate(180deg);
+
+    .arrow {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 20px;
+      height: auto;
+      transition: transform 0.3s ease;
     }
-  }
 
-  .open .arrow {
-    animation: rotateArrow 0.3s forwards;
-  }
+    .answer {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ffd4c2;
+      padding: 0;
+      transition:
+        max-height 0.3s ease,
+        padding 0.3s ease;
+    }
 
-  .open .answer {
-    max-height: 200px;
-    padding: 10px;
-  }
-</style>
+    @keyframes rotateArrow {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
 
-<script>
-  document.querySelectorAll(".info-box").forEach((box) => {
-    box.addEventListener("click", () => {
-      // Luk alle andre bokse
-      document.querySelectorAll(".info-box").forEach((otherBox) => {
-        if (otherBox !== box) {
-          otherBox.classList.remove("open");
-        }
+    .open .arrow {
+      animation: rotateArrow 0.3s forwards;
+    }
+
+    .open .answer {
+      max-height: 200px;
+      padding: 10px;
+    }
+  </style>
+
+  <script>
+    document.querySelectorAll(".info-box").forEach((box) => {
+      box.addEventListener("click", () => {
+        // Luk alle andre bokse
+        document.querySelectorAll(".info-box").forEach((otherBox) => {
+          if (otherBox !== box) {
+            otherBox.classList.remove("open");
+          }
+        });
+        // Åbn eller luk den klikkede boks
+        box.classList.toggle("open");
       });
-      // Åbn eller luk den klikkede boks
-      box.classList.toggle("open");
     });
-  });
-</script>
+  </script>
+</div>
