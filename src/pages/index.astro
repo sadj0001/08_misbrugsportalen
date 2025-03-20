@@ -101,34 +101,33 @@ import Infoboks from "../components/Infoboks.astro";
 
     <Section title="Hvorfor blive frivillig?" backgroundColor="#61C6BB">
       <div class="hvorfor1_grid_1-1">
-       <img class="tegn1" src="/images/ilu3.webp" alt="tegn">
+        <img class="tegn1" src="/images/ilu3.webp" alt="tegn" />
         <div>
           <p class="hvorfor_box">Skab meningsfulde forbindelser og bliv en del af et varmt og fagligt fællesskab af dedikerede frivillige fra hele landet.</p>
         </div>
       </div>
       <div class="hvorfor2_grid_1-1">
-          <div>
-            <p class="hvorfor_box">Du får et meningsfuldt og givende frivilligjob, hvor du på nært hold følger den forandring, du bidrager til for den enkelte familie.</p>
-          </div>
-          <div>
-            <p class="hvorfor_box">Du bliver støttet og guidet i din opstart af din personlige mentor, og du kan altid søge råd hos kompetente og erfarne ledere og kollegaer.</p>
-          </div>
+        <div>
+          <p class="hvorfor_box">Du får et meningsfuldt og givende frivilligjob, hvor du på nært hold følger den forandring, du bidrager til for den enkelte familie.</p>
+        </div>
+        <div>
+          <p class="hvorfor_box">Du bliver støttet og guidet i din opstart af din personlige mentor, og du kan altid søge råd hos kompetente og erfarne ledere og kollegaer.</p>
+        </div>
       </div>
       <div class="grid_1-1-1">
         <div>
           <p class="hvorfor_box">Du har som rådgiver et fleksibelt skema, som du selv er med til at tilrettelægge.</p>
         </div>
         <div>
-          <p class="hvorfor_box">Du får mulighed for at udvikle dine empatiske og faglige færdigheder og et plus på. </p>
+          <p class="hvorfor_box">Du får mulighed for at udvikle dine empatiske og faglige færdigheder og et plus på.</p>
         </div>
-        
-        <img class="tegn2" src="/images/ilu4.webp" alt="tegn">
-        
+
+        <img class="tegn2" src="/images/ilu4.webp" alt="tegn" />
       </div>
     </Section>
 
     <Section title="Ofte stillede spørgsmål" backgroundColor="#FCF3E1">
-      <div class="grid_1-1">
+      <div class="grid_faq">
         <div>
           <Info text="Hvor mange timer forventer i man arbejder?" answer="Vi har ikke specifikke forventninger alle har forskellige kalendere. Vi finder i fællesskab ud af, hvad der fungerer bedst for dig." />
           <Info text="Kan alle blive frivillige?" answer="JA. Vi tager imod alle med kyshånd, så tøv ikke med at tilmelde dig." />
@@ -252,6 +251,12 @@ import Infoboks from "../components/Infoboks.astro";
     grid-template-columns: 2fr 1fr;
   }
 
+  .grid_faq {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
   p {
     font-size: 20px;
     font-family: "Roboto", sans-serif;
@@ -275,27 +280,27 @@ import Infoboks from "../components/Infoboks.astro";
   }
 
   /*hvorfor blive frivillig*/
-  .tegn1{
+  .tegn1 {
     width: 20%;
   }
-   .tegn2{
+  .tegn2 {
     width: 32%;
     padding-top: 10rem;
   }
 
-  .hvorfor_box{
+  .hvorfor_box {
     max-width: 30ch;
     border: solid 1px black;
     padding: 2rem;
     border-radius: 10%;
   }
 
-     .hvorfor1_grid_1-1 {
+  .hvorfor1_grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 5rem;
   }
-      .hvorfor2_grid_1-1 {
+  .hvorfor2_grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 20rem;
@@ -303,10 +308,10 @@ import Infoboks from "../components/Infoboks.astro";
     padding-bottom: 5rem;
   }
 
-    .grid_1-1-1 {
+  .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-       padding-left: 5rem;
+    padding-left: 5rem;
   }
 
   /*talebobler*/
@@ -314,7 +319,7 @@ import Infoboks from "../components/Infoboks.astro";
     max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 2rem;
   }
 
   .left {
@@ -338,11 +343,6 @@ import Infoboks from "../components/Infoboks.astro";
       gap: 30px;
       border-radius: 5px;
     }
-  }
-
-  .last-image img {
-    width: 50px; /* Ændr billedets størrelse */
-    height: auto; /* Behold aspektforholdet */
   }
 
   /* forms */
